@@ -6,7 +6,7 @@ Nonlinear mechanics. Chess. Photography.
 
 permalink: /:slug
 
-favicon: "./logo.png" # relative path to site's favicon
+favicon: "./logo_go_nonlinear.png" # relative path to site's favicon
 
 #twitter:
 #    username: myusername # update or delete this
