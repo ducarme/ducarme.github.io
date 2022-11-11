@@ -2,7 +2,7 @@ title: Paul Ducarme
 author: Paul Ducarme
 url: https://ducarme.github.io # root address of the site
 description: > # description of the site (multiple lines allowed)
-Nonlinear mechanics. Chess. Photography.
+  Nonlinear mechanics. Chess. Photography.
 
 permalink: /:slug
 
