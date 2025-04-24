@@ -4,10 +4,9 @@ SITEURL = ""
 
 PATH = "content"
 
-THEME = 'themes/pelican-tufte/pelican-tufte-theme'
+THEME = 'themes/pelican-tufte-theme'
 
 SITESUBTITLE = 'Researcher in applied physics, interested in nonlinear mechanics'
-
 
 
 TIMEZONE = 'Europe/Amsterdam'

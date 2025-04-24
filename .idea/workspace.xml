@@ -5,32 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="95111404-b018-4af9-a380-c31cb597d7b3" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/themes/pelican-tufte/pelican-tufte-theme/templates/gallery.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/pelican-tufte/.gitattributes" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/pelican-tufte/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/pelican-tufte/LICENSE" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/pelican-tufte/Pipfile" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/pelican-tufte/Pipfile.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/pelican-tufte/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/pelican-tufte/pelican-tufte-demo/content/article-1.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/pelican-tufte/pelican-tufte-demo/content/article-2.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/pelican-tufte/pelican-tufte-demo/content/article-3.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/pelican-tufte/pelican-tufte-demo/content/pages/about.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/pelican-tufte/pelican-tufte-demo/content/pages/contact.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/pelican-tufte/pelican-tufte-demo/content/projects/project-1.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/pelican-tufte/pelican-tufte-demo/content/projects/project-2.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/pelican-tufte/pelican-tufte-demo/content/projects/project-3.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/pelican-tufte/pelican-tufte-demo/content/publications/pub-1.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/pelican-tufte/pelican-tufte-demo/content/publications/pub-2.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/pelican-tufte/pelican-tufte-demo/content/publications/pub-3.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/pelican-tufte/pelican-tufte-demo/content/talks/talk-1.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/pelican-tufte/pelican-tufte-demo/content/talks/talk-2.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/pelican-tufte/pelican-tufte-demo/content/talks/talk-3.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/pelican-tufte/pelican-tufte-demo/content/teaching/teach-1.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/pelican-tufte/pelican-tufte-demo/content/teaching/teach-2.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/pelican-tufte/pelican-tufte-demo/content/teaching/teach-3.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/pelican-tufte/screenshot.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/themes/pelican-tufte/screenshot2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/.workflows/pelican.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/.workflows/pelican.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pelicanconf.py" beforeDir="false" afterPath="$PROJECT_DIR$/pelicanconf.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/themes/pelican-tufte" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,7 +17,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/themes/pelican-tufte" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
   &quot;lastFilter&quot;: {
@@ -48,7 +27,7 @@
 }</component>
   <component name="GithubPullRequestsUISettings"><![CDATA[{
   "selectedUrlAndAccountId": {
-    "url": "https://github.com/jAniceto/pelican-tufte",
+    "url": "https://github.com/ducarme/ducarme.github.io.git",
     "accountId": "f4ec4fa2-d46d-4ea5-9aa5-d4d9cb7b7b67"
   }
 }]]></component>
@@ -62,6 +41,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "ASKED_MARK_IGNORED_FILES_AS_EXCLUDED": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
     "last_opened_file_path": "C:/Users/ducarme/Documents/perso_site",
@@ -70,6 +50,7 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\ducarme\Documents\perso_site\themes" />
       <recent name="C:\Users\ducarme\Documents\perso_site\content" />
       <recent name="C:\Users\ducarme\Documents\perso_site\content\pages" />
       <recent name="C:\Users\ducarme\Documents\perso_site\themes\pelican-tufte\pelican-tufte-theme\templates" />
