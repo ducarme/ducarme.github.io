@@ -1,0 +1,75 @@
+{% extends "base.html" %}
+
+{% block title %}
+{{ SITENAME }} - {{ category }}
+{% endblock %}
+
+
+{% block content %}
+
+<section>
+  <h1>{{ category }}</h1>
+</section>
+
+{% for item in articles %}
+<section>
+  <!-- Title and link -->
+  <h2>
+    {% if item.link %}
+      <a href="{{ item.link }}" target="_blank">{{ item.title }}</a>
+    {% else %}
+      {{ item.title }}
+    {% endif %}
+  </h2>
+
+  <!-- Image -->
+  {% if item.image %}
+  <p>
+    <span class="marginnote">
+      <img src="{{ item.image }}" alt="{{ item.title }}">
+    </span>
+  </p>
+  {% endif %}
+
+  <!-- Authors -->
+  <p>
+    {% if item.show_authors %}
+    {% for author in item.authors %}
+    {{ author }}{% if not loop.last %}<span class="nav-sep">&#x2022;</span>{% endif %}
+    {% endfor %}
+    <!-- <br> -->
+    {% endif %}
+  </p>
+  
+  <!-- Lead (subtitle) -->
+  {% if item.lead %}
+  <p>
+    <em>{{ item.lead }}</em>
+  </p>
+  {% endif %}
+
+  <p>
+    <!-- Journal -->
+    {% if item.journal %}<em>{{ item.journal }}</em>{% endif %}
+
+    <!-- Issue / Volume / Book title -->
+    {% if item.issue %}<span class="nav-sep">&#x2022;</span>{{ item.issue }}{% endif %}
+
+    <!-- Location -->
+    {% if item.location %}{{ item.location }}{% endif %}
+    
+    <!-- Year -->
+    {% if item.year %}<span class="nav-sep">&#x2022;</span>{{ item.year }}{% endif %}
+  </p>
+
+  <p>
+    {% if category == 'Blog' %}
+    <time datetime="{{ item.date.isoformat() }}">{{ item.locale_date }}</time>
+    {% endif %}
+  </p>
+
+  <p>{{ item.content }}</p>
+</section>
+{% endfor %}
+
+{% endblock content %}
