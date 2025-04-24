@@ -1,6 +1,5 @@
 AUTHOR = 'Paul Ducarme'
 SITENAME = 'Paul Ducarme'
-SITEURL = "https://github.com/ducarme/ducarme.github.io"
 
 PATH = "content"
 
