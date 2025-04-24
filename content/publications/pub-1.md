@@ -1,4 +1,4 @@
-Title: Mauris semper mi quis elit dignissim lobortis suscipit ultricies condimentum
+Title: Mauis semper mi quis elit dignissim lobortis suscipit ultricies condimentum
 Category: Publications
 Journal: Quisque consequat auctor
 Authors: Vivamus venenatis1, Vivamus venenatis2, Vivamus venenatis3
