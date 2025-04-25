@@ -21,17 +21,17 @@ AUTHOR_FEED_RSS = None
 
 # Blogroll
 LINKS = (
-    ('Pelican', 'https://getpelican.com/'),
-    ('Python.org', 'https://www.python.org/'),
-    ('Jinja2', 'https://palletsprojects.com/p/jinja/'),
+    ('AMOLF', 'https://amolf.nl/'),
+    ('ARCNL', 'https://arcnl.nl/'),
+    ('Soft robotic matter', 'https://overvelde.com/'),
+    ('Springable', 'https://ducarme.github.io/springable/'),
 )
 
 # Social widget
 SOCIAL = (
-    ('Scopus', '#'),
-    ('ORCID', '#'),
-    ('Google Scholar', '#'),
-    ('Twitter', '#'),
+    ('Google Scholar', 'https://scholar.google.com/citations?user=rrctz-oAAAAJ'),
+    ('ORCID', 'https://orcid.org/0009-0002-7429-2803'),
+    ('Bluesky', 'https://bsky.app/profile/paulducarme.bsky.social'),
 )
 
 DEFAULT_PAGINATION = False
@@ -44,10 +44,13 @@ INDEX_SAVE_AS = 'blog.html'
 DISPLAY_PAGES_ON_MENU = False
 DISPLAY_CATEGORIES_ON_MENU = False
 MENUITEMS = (
+    ('Research', '/'),
     ('Publications', '/category/publications.html'),
-    ('Teaching', '/category/teaching.html'),
+    #('Teaching', '/category/teaching.html'),
     ('Talks', '/category/talks.html'),
-    ('Projects', '/category/projects.html'),
-    ('Blog', '/blog.html'),
+    #('Projects', '/category/projects.html'),
+    #('Blog', '/blog.html'),
+    ('Photos', '/pages/photos.html'),
+    ('Bio', '/pages/bio.html'),
     ('Contact', '/pages/contact.html'),
 )

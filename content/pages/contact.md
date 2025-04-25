@@ -1,10 +1,4 @@
 Title: Contact
 
-### email
+## Send me an email to
 paulducarme@hotmail.com
-
-### google scholar
-ddd
-
-### research gate
-ddd
