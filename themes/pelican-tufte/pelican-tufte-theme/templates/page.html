@@ -28,24 +28,19 @@
 <div class="columns">
   <section>
     <h2>Find me in:</h2>
-    <p>
       <ul>
         {% for name, link in SOCIAL %}
         <li><a href="{{ link }}">{{ name }}</a></li>
         {% endfor %}
       </ul>
-  </p>
   </section>
-  
   <section>
     <h2>Links:</h2>
-    <p>
       <ul>
         {% for name, link in LINKS %}
         <li><a href="{{ link }}">{{ name }}</a></li>
         {% endfor %}
       </ul>
-  </p>
   </section>
 </div>
 {% endif %}
