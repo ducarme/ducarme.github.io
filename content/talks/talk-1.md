@@ -1,7 +1,7 @@
-Title: Mauris semper mi quis elit dignissim lobortis
+Title: Exotic Properties Enabled by a Mechanical Metamaterial that Contracts Under Increasing Tension
 Category: Talks
-Location: Quisque consequat auctor
-Date: 2018-12-03
-Link: www.example.com
+Location: APS March Meeting, Las Vegas, NV, USA
+Date: 2023-03-08
+Link: https://ui.adsabs.harvard.edu/abs/2023APS..MARM07002D/abstract
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ut orci dui. Quisque consequat auctor nisl, quis pretium lectus. Nulla et facilisis lectus, at commodo mi. Fusce suscipit ultricies condimentum. Mauris semper mi quis elit dignissim lobortis. Phasellus in accumsan nibh. Nunc aliquet mi ligula, vel elementum purus tincidunt et.
+All known materials and structures elongate in response to an increasing tensile force. Recently it has been suggested that this behavior is not inevitable: a sudden and finite contraction under an increasing quasistatic tension load could theoretically be observed in a nonlinear mechanical network satisfying a Wheatstone bridge topology. Inspired by this theoretical prediction, we design and manufacture a mechanical structure that displays this counter-intuitive phenomenon. The design is obtained by combining modular building blocks made of an elastic material. Each building block exploits geometric nonlinearities to show either a softening, stiffening or nonmonotonic tensile mechanical response. We then develop a numerical tool to investigate the collective behavior of assemblies made of these building blocks, which guides us towards the final design. Our work uncovers the design principles to build a structure that contracts under tension and brings to light potentially useful associated properties, thereby further expanding the design space for smart structures, MEMS and mechanical metamaterials that could harness these novel mechanical behaviors to achieve advanced functionalities. 

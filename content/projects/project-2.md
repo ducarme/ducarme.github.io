@@ -4,6 +4,7 @@ Lead: Quisque consequat auctor Nunc aliquet
 Date: 2020-12-03
 Link: www.example.com
 Image: https://placehold.jp/300x300.png
+Status: draft
 
 Pellentesque sit amet orci enim. Etiam et elementum tellus, eu mattis sapien. Aenean mauris nulla, euismod id imperdiet in, fringilla ut odio. 
 

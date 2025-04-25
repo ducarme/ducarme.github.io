@@ -5,6 +5,7 @@ Category: Blog
 Tags: tag1, tag2
 Authors: Vivamus venenatis
 Summary: Interdum et malesuada fames ac ante ipsum primis in faucibus.
+Status: draft
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse efficitur viverra ante, sit amet euismod nisl euismod eu. Fusce sed suscipit mi, ut sodales nisl. Vivamus consectetur sapien vitae sodales gravida. Pellentesque scelerisque risus non augue pharetra tincidunt. Nulla in accumsan metus. Sed eros neque, elementum non posuere a, fringilla vitae eros. Donec vestibulum neque vitae metus elementum, vitae dapibus erat malesuada. Aenean eros purus, faucibus id dictum in, sollicitudin vitae nunc. Suspendisse eget mauris suscipit, rutrum elit ac, rhoncus arcu. Vivamus venenatis quam purus, ac rutrum orci aliquam gravida. Fusce ac magna sed augue pharetra tempus sit amet in orci.
 

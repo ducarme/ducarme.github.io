@@ -5,6 +5,9 @@ Tags: tag2
 Authors: Vivamus venenatis
 Summary: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse efficitur viverra ante, sit amet euismod nisl euismod eu. Fusce sed suscipit mi, ut sodales nisl. Vivamus consectetur sapien vitae sodales gravida. Pellentesque scelerisque risus non augue pharetra tincidunt. Nulla in accumsan metus. Sed eros neque, elementum non posuere a, fringilla vitae eros. 
 Image: https://placehold.jp/500x500.png
+Status: draft
+
+
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse efficitur viverra ante, sit amet euismod nisl euismod eu. Fusce sed suscipit mi, ut sodales nisl. Vivamus consectetur sapien vitae sodales gravida. Pellentesque scelerisque risus non augue pharetra tincidunt. Nulla in accumsan metus. Sed eros neque, elementum non posuere a, fringilla vitae eros. 
 
