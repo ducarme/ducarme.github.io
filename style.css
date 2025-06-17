@@ -1,0 +1,346 @@
+/* Basic Reset for a clean slate */
+:root {
+
+  --primary: #448d4f;
+  --secondary: #efbd8a;
+  --accent: #eab362;
+  /* Light Mode Colors (Defaults) */
+  --background-color: #D5D5FF; /* Soft off-white for general background */
+  --text-color: #333333; /* Dark grey for main text */
+  --link-color: #555555; /* Medium grey for links */
+  --link-hover-color: #010101; /* Dark grey/black for link hover */
+  --site-name-color: #333333; /* Dark grey for your name on homepage */
+  --site-name-hover-color: #010101;
+  --sidenote-color: #333333; /* Dark grey for sidenotes */
+  --footer-text-color: #333333; /* Default footer text color */
+  --footer-link-color: #555555; /* Default footer link color */
+  --footer-link-hover-color: #010101; /* Default footer link hover color */
+}
+
+body.dark-mode {
+
+  --primary: #72bb7d;
+  --secondary: #754210;
+  --accent: #9d6715;
+  /* Dark Mode Colors (Overrides) */
+  --background-color: #1A1439; /* Very dark charcoal */
+  --text-color: #cccccc; /* Light grey for text */
+  --link-color: #aaaaaa; /* Soft blue for links (stands out in dark mode) */
+  --link-hover-color: #f0f0f0; /* Pure white for link hover */
+  --site-name-color: #cccccc; /* Lighter grey for site name */
+  --site-name-hover-color: #f0f0f0;
+  --sidenote-color: #cccccc; /* Lighter grey for sidenotes */
+  --footer-text-color: #cccccc;
+  --footer-link-color: #aaaaaa;
+  --footer-link-hover-color: #f0f0f0;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    /* Pure white background */
+    background-color: var(--background-color);
+    color: var(--text-color); /* Soft dark grey for text */
+
+    /* The core of the "thin, serif, pure" feel */
+    font-family: 'Crimson Pro', Georgia, "Times New Roman", Times, serif;
+    font-weight: 300; /* Thin font weight for body text */
+    font-size: 1.15em; /* Base font size for readability */
+    line-height: 1.7; /* Generous line spacing */
+    letter-spacing: 0.01em; /* Very subtle letter spacing for airiness */
+
+    /* Constrain content width for readability, center it */
+    max-width: 700px; /* Adjust content width as needed */
+    margin: 4em auto; /* Top/bottom margin, auto for horizontal centering */
+    padding: 0 1.5em; /* Padding on sides for smaller screens (prevents content touching edges) */
+}
+
+/* Headings: Subtle and refined hierarchy (for content within <main>) */
+h1:not(.navigation h1), h2, h3, h4, h5, h6 { /* Exclude H1s inside .navigation */
+    font-weight: 400;
+    line-height: 1.3;
+    margin-top: 1.5em;
+    margin-bottom: 0.8em;
+    letter-spacing: 0;
+}
+
+h1:not(.navigation h1) {
+    font-size: 2em;
+}
+
+h2 { font-size: 1.5em; }
+h3 { font-size: 1.3em; }
+
+/* Paragraphs */
+p {
+    margin-bottom: 1.2em;
+}
+
+/* Lists (outside navigation) */
+ul:not(.navigation-list) {
+    list-style-type: disc;
+    margin-left: 1.5em;
+    margin-bottom: 1.2em;
+}
+
+li {
+    margin-bottom: 0.5em;
+}
+
+/* General anchor link styling within content */
+main a {
+    text-decoration: underline; /* Add an underline */
+    text-underline-offset: 0.15em; /* A small offset for neatness, similar to others */
+    transition: color 0.2s ease-in-out; /* Smooth transition for color change */
+    color:  var(--link-color); /* A slightly more pronounced green for in-content links */
+}
+
+main a:hover,
+main a:focus {
+    color: var(--link-hover-color); /* Darker green on hover */
+}
+
+/* Image styling */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 1.5em auto;
+}
+
+
+/* ========================================================================= */
+/* --- GLOBAL NAVIGATION STYLES (.navigation, based on provided inspiration) --- */
+/* ========================================================================= */
+
+.navigation {
+    display: flex;
+    flex-direction: row; /* Default to row for desktop */
+    justify-content: space-between;
+    align-items: baseline; /* Aligns items based on their text baseline */
+    text-align: left; /* General text alignment within nav (though flex handles main layout) */
+    margin-bottom: 4rem; /* Generous space below the entire navigation, using rem */
+    padding-top: 0.5em; /* Keep some top padding */
+    padding-bottom: 0.5em; /* Keep some bottom padding for visual separation */
+}
+
+/* Site Name within Navigation */
+.navigation h1 {
+    font-size: 1.8rem; /* Using rem for consistent sizing based on inspiration */
+    flex-shrink: 1; /* Allow to shrink if needed, but flex-basis can prevent extreme shrinkage */
+    border-bottom: none; /* No border on the h1 */
+    color: var(--site-name-color); /* Default text color for the site name */
+    margin: 0; /* Remove default h1 margins */
+    padding-right: 1rem; /* Space between title and menu, using rem */
+    line-height: 1; /* Tighter line height for the title */
+    white-space: nowrap; /* Prevent site name from breaking into multiple lines */
+}
+
+.navigation h1 .sitename { /* Target the sitename link very specifically */
+    text-decoration: none; /* **This will now definitely remove the underline** */
+    border-bottom: none; /* Explicitly ensure no border-bottom either */
+    color: inherit; /* Inherit color from parent h1 */
+    transition: color 0.2s ease-in-out;
+}
+
+.navigation h1 .sitename:hover,
+.navigation h1 .sitename:focus {
+    color: var(--site-name-hover-color); /* Darker on hover for the sitename */
+    outline: none;
+}
+
+
+/* Navigation List (the actual menu items) */
+.navigation-list {
+    list-style: none; /* Remove bullets */
+    padding-left: 0; /* Remove default padding */
+    margin: 0; /* Remove default margins */
+    margin-top: -5px; /* Adjust vertical position slightly, as per inspiration */
+    font-size: 1.2rem; /* Using rem for font size as per inspiration */
+    display: flex; /* Make the ul a flex container for its items */
+    flex-wrap: wrap; /* Allow menu items to wrap */
+    justify-content: flex-end; /* Align links to the right */
+    gap: 1rem; /* Consistent spacing between menu items, using rem */
+}
+
+.navigation li {
+    list-style-image: none; /* Ensure no image bullets */
+    list-style-type: none; /* Ensure no disc bullets */
+    display: inline-block; /* Keep them inline-block for precise control if not flex */
+    margin-left: 0; /* Reset previous margins, gap handles spacing now */
+    /* If you prefer margin-left over gap for older browser support:
+       margin-left: 1rem;
+    */
+    padding: 0; /* Remove any padding on li */
+}
+
+.navigation a { /* Styles for all links within .navigation */
+    text-decoration: underline; /* Underline all navigation links */
+    text-underline-offset: 0.3em;
+    color: var(--link-color); /* Soft grey for links, can be adjusted or use CSS Variables */
+    font-weight: 400; /* Regular weight for clarity */
+    transition: color 0.2s ease-in-out;
+}
+
+.navigation a:hover,
+.navigation a:focus {
+    color: var(--link-hover-color); /* Darker on hover */
+    outline: none;
+}
+
+/* Active link styling */
+.navigation li.active {
+    color: var(--link-hover-color); /* Darker color for active link */
+    font-weight: 500; /* Slightly bolder for active link */
+}
+
+.navigation li.active a {
+    color: inherit; /* Inherit color from the parent li */
+    text-decoration: none; /* No underline for active link itself */
+    pointer-events: none; /* Make active link non-clickable */
+    cursor: default;
+}
+
+
+/* Responsive adjustments for .navigation */
+@media only screen and (max-width: 780px) { /* Using the 1280px breakpoint from inspiration */
+    .navigation {
+        flex-direction: column; /* Stack title and nav vertically */
+        align-items: center; /* Center both items when stacked */
+        text-align: center; /* Center text within stacked items */
+    }
+
+    .navigation h1 {
+        padding-right: 0; 
+        margin-bottom: 0.5rem; 
+        font-size: 2rem; 
+        width: 100%; 
+    }
+
+    .sitename {
+        white-space: normal; /* Allow site name to wrap if it's long when stacked */
+    }
+
+    .navigation-list {
+        justify-content: center; /* Center links when stacked */
+        margin-top: 0; /* Reset negative margin when stacked */
+        width: 75%; /* Take full width */
+        gap: 0.9rem; /* Slightly reduce gap when stacked */
+    }
+}
+
+/* Further responsive adjustment for very small screens if needed */
+
+/* @media (max-width: 600) {
+    .navigation-list {
+        flex-direction: column;
+        align-items: center;
+    }
+    .navigation-list li {
+        margin-left: 0;
+    }
+} */
+
+
+/* Footer */
+footer {
+    text-align: center;
+    margin-top: 4em;
+    font-size: 0.85em;
+    color: var(--footer-text-color); /* Default text color for the footer */
+}
+
+footer a {
+    color: var(--footer-link-color); /* The link will inherit the #777 color from the footer text */
+    text-decoration: underline; /* Add an underline */
+    text-underline-offset: 0.15em; /* A small offset for neatness, similar to others */
+    transition: color 0.2s ease-in-out; /* Smooth transition for color change */
+}
+
+footer a:hover,
+footer a:focus {
+    color: var(--footer-link-hover-color); /* Make the link slightly darker on hover/focus for interactivity */
+    outline: none; /* Remove outline for a cleaner look on focus */
+}
+
+/* ========================================================================= */
+/* --- HOMEPAGE SPECIFIC STYLES (for index.html) --- */
+/* ========================================================================= */
+
+body.homepage .navigation {
+     flex-direction: column; /* Stacks <h1> (site name) and <ul.navigation-list> vertically */
+     align-items: flex-start; /* Aligns both the site name and the menu list to the left */
+     padding-left: 0;
+     padding-right: 0;
+}
+
+
+
+body.homepage .navigation-list {
+    flex-direction: column; /* Stacks the individual <li> menu items vertically */
+    align-items: flex-start; /* Aligns each <li> menu item to the left */
+    gap: 0.9em; /* Adds vertical spacing between the stacked menu items */
+    margin-top: 2.5em; /* Adds some space between the site name and the menu list */
+    margin-left: 0; /* Ensures the entire menu list aligns flush left */
+    padding-left: 0; /* Ensures the entire menu list aligns flush left by removing default ul padding */
+}
+
+body.homepage nav ul li {
+    margin-bottom: 1em;
+    padding: 0;
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    width: 100%;
+    white-space: normal;
+}
+
+
+.nav-sidenote {
+    font-size: 1.05rem;
+    color: var(--sidenote-color);
+    text-align: right; /* Aligns the text content itself to the right within the sidenote's box */
+    margin-left: 15em; /* <--- INCREASE THIS VALUE: Adjust as needed to push it further right */
+    flex-shrink: 0;
+}
+
+@media only screen and (max-width: 780px) { /* Using the 1280px breakpoint from inspiration */
+    body.homepage .navigation {
+        align-items: center; /* Center both items when stacked */
+        text-align: center; /* Center text within stacked items */
+    }
+
+    .nav-sidenote {
+    font-size: 1.05rem;
+    color: var(--sidenote-color);
+    text-align: right; /* Aligns the text content itself to the right within the sidenote's box */
+    margin-left: 10em; /* <--- INCREASE THIS VALUE: Adjust as needed to push it further right */
+    flex-shrink: 0;
+}
+}
+
+
+/* Responsive adjustments for the sidenote behavior on smaller screens */
+@media (max-width: 600px) {
+    body.homepage .navigation-list {
+    gap: 0.6em; /* Adds vertical spacing between the stacked menu items */
+    }
+
+    body.homepage nav ul li {
+        flex-direction: column;
+        align-items: center;
+    }
+    .nav-sidenote {
+        text-align: center;
+        margin-left: 0;
+        width: 100%;
+    }
+    body.homepage nav ul li a {
+        white-space: normal;
+    }
+}
