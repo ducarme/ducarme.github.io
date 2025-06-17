@@ -12,12 +12,23 @@ TIMEZONE = 'Europe/Amsterdam'
 
 DEFAULT_LANG = 'EN'
 
+PLUGIN_PATHS = ['plugins']
+PLUGINS = ['tufte_liquid_tags']
+
+LIQUID_TAGS = ["img", "literal", "youtube", "audio", "include_code"]
+YOUTUBE_THUMB_ONLY = True
+YOUTUBE_THUMB_SIZE = 'mq'
+CODE_DIR = 'code'
+NOTEBOOK_DIR = 'notebooks'
+
+
 # Feed generation is usually not desired when developing
 FEED_ALL_ATOM = None
 CATEGORY_FEED_ATOM = None
 TRANSLATION_FEED_ATOM = None
 AUTHOR_FEED_ATOM = None
 AUTHOR_FEED_RSS = None
+
 
 # Blogroll
 LINKS = (
