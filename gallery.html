@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>gallery</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        /* Specific styles for the gallery page - kept here for simplicity, can be moved to style.css */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: 1fr; /* Single column on small screens */
+            gap: 2em; /* Space between gallery items */
+            margin-top: 2em;
+        }
+
+        .gallery-item {
+            text-align: center;
+        }
+
+        .gallery-item img {
+            max-width: 100%;
+            height: auto;
+            display: block; /* Remove extra space below image */
+            margin: 0 auto 0.8em auto; /* Center image and add space below */
+            border-radius: 1.5mm;
+        }
+
+        .gallery-item figcaption {
+            font-size: 0.9em;
+            color: #555;
+            line-height: 1.4;
+        }
+
+        @media (min-width: 600px) {
+            .gallery-grid {
+                grid-template-columns: repeat(2, 1fr); /* Two columns on medium screens */
+            }
+        }
+
+        @media (min-width: 900px) {
+            .gallery-grid {
+                grid-template-columns: repeat(3, 1fr); /* Three columns on larger screens */
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navigation">
+        <h1>
+            <a class="sitename" href="/">paul ducarme</a>
+        </h1>
+
+        <ul class="navigation-list">
+            <li><a href="research.html">research</a></li>
+            <li><a href="portfolio.html">portfolio</a></li>
+            <li><a href="resume.html">resume</a></li>
+            <li class="active"><a href="gallery.html">gallery</a></li>
+            <li><a href="about.html">about</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <div class="gallery-grid">
+            <figure class="gallery-item">
+                <img src="images/image1.jpg" alt="Description of Image 1">
+                <!-- <figcaption><strong>Title of Work 1</strong><br>A brief description of this piece and its context. (Year)</figcaption> -->
+            </figure>
+
+            <figure class="gallery-item">
+                <img src="images/image2.jpg" alt="Description of Image 2">
+                <!-- <figcaption><strong>Title of Work 2</strong><br>Reflections on the inspiration and execution of this project. (Year)</figcaption> -->
+            </figure>
+
+            <!-- <figure class="gallery-item">
+                <img src="images/image3.jpg" alt="Description of Image 3">
+                <figcaption><strong>Title of Work 3</strong><br>Exploring new techniques and visual narratives. (Year)</figcaption>
+            </figure>
+
+            <figure class="gallery-item">
+                <img src="images/image4.jpg" alt="Description of Image 4">
+                <figcaption><strong>Title of Work 4</strong><br>An experimental piece focusing on [concept]. (Year)</figcaption>
+            </figure>
+            </div> -->
+
+    </main>
+
+    <footer>
+        <p> Contact me via
+            <a href="mailto:paulducarme@hotmail.com">email</a> or
+            <a href="https://www.linkedin.com/in/paul-ducarme/" target="_blank" rel="noopener noreferrer">linkedin</a>.
+        </p>
+    </footer>
+    <script src="theme-toggle.js"></script>
+
+</body>
+</html>
