@@ -115,15 +115,13 @@ img {
 
 .image-float-text {
     float: left; /* Or 'right' if you want it on the other side */
-    width: 200px; /* Adjust this fixed width as needed */
-    height: auto; /* Maintain aspect ratio */
 
-    padding: 5px; /* Creates the white "space" between image content and border */
-    border: 20px solid white; /* The actual white border line */
+    border: 3px solid white; /* The actual white border line */
+    border-radius: 1.5mm;
 
     /* Margins to separate from surrounding text */
     /* top right bottom left */
-    margin: 0 1.5em 1em 0; /* Adjust these values. Using 'em' for consistency with your typography. */
+    margin: 1em 0em 1em 0; /* Adjust these values. Using 'em' for consistency with your typography. */
                            /* 0 on top, 1.5em on the right (separates from text flowing beside it) */
                            /* 1em on the bottom (separates from text below it) */
                            /* 0 on the left */
