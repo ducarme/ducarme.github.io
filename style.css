@@ -6,13 +6,13 @@
   --accent: #eab362;
   /* Light Mode Colors (Defaults) */
   --background-color: #D5D5FF; /* Soft off-white for general background */
-  --text-color: #333333; /* Dark grey for main text */
+  --text-color: #222222; /* Dark grey for main text */
   --link-color: #555555; /* Medium grey for links */
   --link-hover-color: #010101; /* Dark grey/black for link hover */
-  --site-name-color: #333333; /* Dark grey for your name on homepage */
+  --site-name-color: #222222; /* Dark grey for your name on homepage */
   --site-name-hover-color: #010101;
-  --sidenote-color: #333333; /* Dark grey for sidenotes */
-  --footer-text-color: #333333; /* Default footer text color */
+  --sidenote-color: #222222; /* Dark grey for sidenotes */
+  --footer-text-color: #222222; /* Default footer text color */
   --footer-link-color: #555555; /* Default footer link color */
   --footer-link-hover-color: #010101; /* Default footer link hover color */
 }
