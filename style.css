@@ -17,22 +17,24 @@
   --footer-link-hover-color: #010101; /* Default footer link hover color */
 }
 
-body.dark-mode {
-
-  --primary: #72bb7d;
-  --secondary: #754210;
-  --accent: #9d6715;
-  /* Dark Mode Colors (Overrides) */
-  --background-color: #1A1439; /* Very dark charcoal */
-  --text-color: #cccccc; /* Light grey for text */
-  --link-color: #aaaaaa; /* Soft blue for links (stands out in dark mode) */
-  --link-hover-color: #f0f0f0; /* Pure white for link hover */
-  --site-name-color: #cccccc; /* Lighter grey for site name */
-  --site-name-hover-color: #f0f0f0;
-  --sidenote-color: #cccccc; /* Lighter grey for sidenotes */
-  --footer-text-color: #cccccc;
-  --footer-link-color: #aaaaaa;
-  --footer-link-hover-color: #f0f0f0;
+/* Dark Mode based on system preference */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --primary: #72bb7d;
+    --secondary: #754210;
+    --accent: #9d6715;
+    /* Dark Mode Colors (Overrides) */
+    --background-color: #1A1439; /* Very dark charcoal */
+    --text-color: #cccccc; /* Light grey for text */
+    --link-color: #aaaaaa; /* Soft blue for links (stands out in dark mode) */
+    --link-hover-color: #f0f0f0; /* Pure white for link hover */
+    --site-name-color: #cccccc; /* Lighter grey for site name */
+    --site-name-hover-color: #f0f0f0;
+    --sidenote-color: #cccccc; /* Lighter grey for sidenotes */
+    --footer-text-color: #cccccc;
+    --footer-link-color: #aaaaaa;
+    --footer-link-hover-color: #f0f0f0;
+  }
 }
 
 
