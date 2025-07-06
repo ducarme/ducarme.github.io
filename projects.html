@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>projects</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <nav class="navigation">
+        <h1>
+            <a class="sitename" href="/">paul ducarme</a>
+        </h1>
+
+        <ul class="navigation-list">
+<!--            <li><a href="research.html">research</a></li>-->
+            <li><a href="portfolio.html">portfolio</a></li>
+<!--            <li><a href="resume.html">resume</a></li>-->
+            <li class="active"><a href="projects.html">projects</a></li>
+            <li><a href="gallery.html">gallery</a></li>
+            <li><a href="about.html">about</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <h1>Building a countersnapping structure</h1>
+        <p>
+            All design files can be downloaded as STL by clicking <a href="downloadables/countersnapping_files.zip" download>here</a>.
+        </p>
+        
+        <p>
+            The countersnapping structure is composed of five building blocks assembled by four connectors,
+            two inner ones and two outer ones.
+            The building blocks are of three types, that I called 'softening', 'stiffening' and 'non-monotonic' respectively.
+            To make the structure we need two softening blocks, two stiffening blocks and one non-monotonic block.
+            <img src="images/howto.png" alt="A descriptive alt text for your image" class="image-float-text">
+        </p>
+        <p>
+            To manufacture the building blocks, we can either cast them in silicone rubber using injection molding
+            (recommended for better results),
+            or directly 3d-print them in a soft TPU (might require a bit more tinkering to make the mechanism work).
+        </p>
+        <p>
+           After
+           <a href="downloadables/countersnapping_files.zip">downloading the zip archive containing the STL files</a>,
+           go to the 'molds' folder if you want to use injection molding,
+           or to the
+           'parts' folder if you want to use 3d-printing. You will then see 'nominal' and 'variations' design files.
+           Start with the nominal design files. Fabricate 1 non-monotonic block, 2 stiffening blocks and 2 softening blocks.
+           In addition, 3d-print 2 inner connectors and 2 outer connectors (long or short version, as you prefer). The STL design files
+           for the connectors are in the 'connectors' folder of the zip archive.
+           Next, assemble the blocks together as shown above. This might be a slightly challenging puzzle.
+           Pay attention to the orientation of the connectors.
+        </p>
+        <p>
+           Next, stretch the mechanism by pulling on the outer connectors. If you observe a sudden reconfiguration
+           (where the non-monotonic block quickly 'opens') and you feel that the mechanism wants to shrink by pulling suddenly more,
+           you have just successfully designed a countersnapping structure!
+        <p>
+           If you do not observe a relatively sudden reconfiguration (where the non-monotonic block quickly 'opens'), you will have
+           to use the variations files of type 'a0' for the softening and the stiffening blocks.
+           Start by only replacing the softening blocks and test the mechanism. If no reconfiguration, replace the stiffening blocks too.
+           If still not working, use the variations files of type 'a1'. If still not working, try re-fabricating some non-monotonic blocks
+           and experiment with those.
+        </p>
+        <p>
+            If you do observe a sudden reconfiguration, but you feel that the tension drops, then you might just have a regular
+            snapping structure. In that case, you will have to use the variation files of type 'b0' for the softening and the stiffening blocks.
+            Start by only replacing the softening blocks and test the mechanism. If the tension still drops, replace the stiffening blocks too.
+            If still not working, use the variations files of type 'b1'. If still not working, try re-fabricating some non-monotonic blocks
+            and experiment with those.
+        </p>
+
+        <h2>Which material: silicone rubber or TPU?</h2>
+        <p>
+            Because silicone is almost perfectly elastic (that is, low energy dissipation or 'bouncy'),
+            the tensile response of a building block made out of silicone
+            remains constant upon multiple loading and unloading cycles.
+            Inversely, because TPU is
+            <a href="https://en.wikipedia.org/wiki/Viscoelasticity#Elastic_versus_viscoelastic_behavior">visco-elastic</a>
+            (that is, high energy dissipation or 'slow to deform'),
+            a building block made out of TPU will have different tensile responses upon loading and unloading
+            (<a href="https://en.wikipedia.org/wiki/Hysteresis#In_mechanics">hysteresis</a>)
+            and will get softer over multiple loading cycles. Therefore, silicone building blocks will lead
+            to a more consistent and repeatable countersnapping response compared to TPU ones.
+        </p>
+
+    </main>
+        </p>    
+            
+    <script src="theme-toggle.js"></script>
+
+</body>
+</html>

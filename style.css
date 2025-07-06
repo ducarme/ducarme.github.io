@@ -113,6 +113,34 @@ img {
     margin: 1.5em auto;
 }
 
+.image-float-text {
+    float: left; /* Or 'right' if you want it on the other side */
+    width: 200px; /* Adjust this fixed width as needed */
+    height: auto; /* Maintain aspect ratio */
+
+    padding: 5px; /* Creates the white "space" between image content and border */
+    border: 20px solid white; /* The actual white border line */
+
+    /* Margins to separate from surrounding text */
+    /* top right bottom left */
+    margin: 0 1.5em 1em 0; /* Adjust these values. Using 'em' for consistency with your typography. */
+                           /* 0 on top, 1.5em on the right (separates from text flowing beside it) */
+                           /* 1em on the bottom (separates from text below it) */
+                           /* 0 on the left */
+
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+
+    /* Important: Override the 'display: block' from the general img rule */
+    display: inline; /* Or display: inline-block; - inline is often sufficient for floats */
+}
+
+/* You might want to adjust the margin if floating right */
+.image-float-text.float-right {
+    float: right;
+    margin: 0 0 1em 1.5em; /* top right bottom left */
+                           /* 0 on top, 0 on right, 1em on bottom, 1.5em on left */
+}
+
 
 /* ========================================================================= */
 /* --- GLOBAL NAVIGATION STYLES (.navigation, based on provided inspiration) --- */
