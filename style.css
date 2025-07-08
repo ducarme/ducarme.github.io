@@ -372,3 +372,101 @@ body.homepage nav ul li {
         white-space: normal;
     }
 }
+
+/* Gallery Container - Using CSS Grid */
+.gallery-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 10px; /* Space between gallery items */
+    margin: 0 auto; /* Center the gallery */
+    padding: 0px;
+}
+
+/* Individual Gallery Item Styling - SIMPLIFIED */
+.gallery-item {
+    border-radius: 10px; /* Keep rounded corners for a soft look on the figure itself */
+    text-align: center; /* Center image and caption */
+    display: flex; /* Use flexbox for vertical alignment of content */
+    flex-direction: column;
+    justify-content: space-between; /* Puts space between image and caption if needed */
+    padding: 5px; /* Add some padding around the image within the item */
+    /* No overflow: hidden here, as it's moved to the <a> tag */
+}
+
+.gallery-item a {
+    display: flex; /* Use flex to center image within the link */
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1; /* Allow the link to grow and fill available space */
+    line-height: 0; /* Remove extra space below images */
+
+    /* NEW: Aspect Ratio and Cropping on the <a> tag */
+    width: 100%; /* Ensure the link takes full width of its parent */
+    aspect-ratio: 3 / 2; /* Default aspect ratio: 3 units wide, 2 units high (landscape) */
+    overflow: hidden; /* Crucial for cropping the image within this container */
+    border-radius: 10px; /* Apply rounded corners to the link container for consistent clipping */
+    position: relative; /* Needed for object-fit to behave correctly with 100% height/width */
+}
+
+/* NEW: Specific aspect ratio for portrait images */
+.gallery-item.portrait a {
+    aspect-ratio: 2 / 3; /* 2 units wide, 3 units high (portrait) */
+}
+
+.gallery-item img {
+    width: 100%; /* Make image fill its container's width */
+    height: 100%; /* Make image fill its container's height */
+    object-fit: cover; /* IMPORTANT: Crop the image to fit the aspect ratio while maintaining its own proportions */
+    display: block; /* Remove extra space below image */
+    transition: transform 0.2s ease; /* Smooth hover effect */
+    /* border-radius: 10px; removed from here, as it's now on the <a> tag */
+}
+
+.gallery-item img:hover {
+    transform: scale(1.01); /* Slightly enlarge image on hover */
+}
+
+/* Image Caption Styling - SIMPLIFIED */
+.gallery-item figcaption {
+    padding: 5px 0 0; /* Padding above caption, no background or top border */
+    font-size: 0.9em;
+    color: var(--text-color); /* Using the variable you provided */
+}
+
+/* Basic Responsiveness */
+@media (max-width: 768px) {
+    .gallery-container {
+        grid-template-columns: repeat(auto-fit, minmax(225px, 1fr));
+        gap: 8px;
+    }
+}
+
+@media (max-width: 480px) {
+    .gallery-container {
+        grid-template-columns: 1fr;
+        gap: 5px;
+    }
+    /* Removed fixed height for img, as aspect-ratio on the <a> tag handles it */
+}
+
+.gslide-description .description-bottom {
+  background-color: var(--background-color);
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+/* Inner wrapper */
+.gdesc-inner {
+  background-color: var(--background-color);
+}
+
+/* Actual text content */
+.gslide-desc {
+  color: var(--text-color);
+}
+
+.glightbox-container .gslide-description.description-bottom .gdesc-inner .gslide-desc {
+  font-family: 'Crimson Pro', serif;
+}
+
