@@ -80,7 +80,7 @@
             and experiment with those.
         </p>
 
-        <h2>Which material: silicone rubber or TPU?</h2>
+        <h3>Which material: silicone rubber or TPU?</h2>
         <p>
             Because silicone is almost perfectly elastic (that is, low energy dissipation or 'bouncy'),
             the tensile response of a building block made out of silicone
@@ -92,6 +92,41 @@
             (<a href="https://en.wikipedia.org/wiki/Hysteresis#In_mechanics">hysteresis</a>)
             and will get softer over multiple loading cycles. Therefore, silicone building blocks will lead
             to a more consistent and repeatable countersnapping response compared to TPU ones.
+        </p>
+
+        <h1>Simulating structures composed of springs</h1>
+        <p>
+            <em>
+            The full documentation is available <a href="http://paulducarme.com/springable/">here</a>.
+            </em>
+        </p>
+        <p>
+            I have developed this framework to simulate how nonlinear structures deform under forces.
+            Unlike most simulation tools, the framework embraces mechnical instabilities, with a custom
+            solver that capture the mechanical behavior beyond buckling and snapping instabilities,
+            bringing useful insight into the world of complex mechanics. It can simulate snapping sequences
+            (such as the popping sequence when you pull on the corrugated segment of a straw), symmetry-breaking bue to buckling
+            (such as beams in compression, suddenly choosing to bend on one side), contact and self-contact, pressure-driven system,
+            cable-driven system, and much more!
+        </p>
+
+        <p>
+            The framework is based on 'flexels', energy-storing entities that generalize the concept of 'spring'.
+            A flexel can be a longitudinal spring (to model extension or compression), an angular spring (to model bending),
+            a fluid (to model pressure or vacuum actuation), a flexible line (to model systems with cables, belt and pulleys), and more.
+            In addition, the individual mechanical behavior of a flexel can be presribed to have any deformation curve. For example,
+            a longitudinal flexel with non-monotonic force-displacement curve models a snapping building block.
+            An angular flexel with a multi-valued torque-angular displacement curve single handedly models the snapping response of tape-spring flexure.
+            A fluid flexel with a multi-valued pressure-volume curve models a metafluid by itself,
+            which are usually simulated by coupling many lower-level elements!
+            A countersnapping structure can be modeled by one flexel with a multi-valued, self-intersecting force-extension curve.
+        </p>
+        
+        <p>
+            In essence, a single flexel can capture the mechanical behaviors of a large variety of mechanical structures,
+            from simple linear springs to multi-valued hysteretic systems.
+            Flexels with that wide range of complexity can be assembled together to model simple or even more complex structures,
+            allowing to to explore the interplay of geometry and intrinsic nonlinearities in mechanics.
         </p>
 
     </main>
