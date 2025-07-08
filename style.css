@@ -377,7 +377,7 @@ body.homepage nav ul li {
 .gallery-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 10px; /* Space between gallery items */
+    gap: 30px; /* Space between gallery items */
     margin: 0 auto; /* Center the gallery */
     padding: 0px;
 }
@@ -414,12 +414,12 @@ body.homepage nav ul li {
 }
 
 .gallery-item img {
-    width: 100%; /* Make image fill its container's width */
-    height: 100%; /* Make image fill its container's height */
+    width: 99%; /* Make image fill its container's width */
+    height: 99%; /* Make image fill its container's height */
     object-fit: cover; /* IMPORTANT: Crop the image to fit the aspect ratio while maintaining its own proportions */
     display: block; /* Remove extra space below image */
     transition: transform 0.2s ease; /* Smooth hover effect */
-    /* border-radius: 10px; removed from here, as it's now on the <a> tag */
+    border-radius: 10px;
 }
 
 .gallery-item img:hover {

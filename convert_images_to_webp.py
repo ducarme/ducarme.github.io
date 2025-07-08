@@ -10,6 +10,7 @@ from pillow_heif import register_heif_opener
 
 pic_quality: int = 80
 pic_maxsize: int = 800
+large_pic_maxsize: int = 1000
 initial_input_dir = 'images'
 initial_output_dir = 'images/thumbnails'
 
@@ -31,8 +32,13 @@ for input_path in input_paths:
     try:
         # Open the image using Pillow
         img = Image.open(input_path)
+        img_large = Image.open(input_path)
+        
         img = ImageOps.exif_transpose(img)
+        img_large = ImageOps.exif_transpose(img_large)
 
+        img_large.thumbnail((large_pic_maxsize, large_pic_maxsize))
+        img_large.save(os.path.join(output_dir, 'large', os.path.basename(input_path)))
 
         img.thumbnail((pic_maxsize, pic_maxsize))
         img.save(os.path.join(output_dir, os.path.basename(input_path)))
