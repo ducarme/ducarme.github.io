@@ -8,45 +8,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@300;400;500&display=swap" rel="stylesheet">
-    <style>
-        /* Specific styles for the gallery page - kept here for simplicity, can be moved to style.css */
-        .gallery-grid {
-            display: grid;
-            grid-template-columns: 1fr; /* Single column on small screens */
-            gap: 2em; /* Space between gallery items */
-            margin-top: 2em;
-        }
+    <!-- Glightbox CSS - REQUIRED for the carousel's styling -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
 
-        .gallery-item {
-            text-align: center;
-        }
-
-        .gallery-item img {
-            max-width: 100%;
-            height: auto;
-            display: block; /* Remove extra space below image */
-            margin: 0 auto 0.8em auto; /* Center image and add space below */
-            border-radius: 1.5mm;
-        }
-
-        .gallery-item figcaption {
-            font-size: 0.9em;
-            color: #555;
-            line-height: 1.4;
-        }
-
-        @media (min-width: 600px) {
-            .gallery-grid {
-                grid-template-columns: repeat(2, 1fr); /* Two columns on medium screens */
-            }
-        }
-
-        @media (min-width: 900px) {
-            .gallery-grid {
-                grid-template-columns: repeat(3, 1fr); /* Three columns on larger screens */
-            }
-        }
-    </style>
 </head>
 <body>
     <nav class="navigation">
@@ -65,20 +29,91 @@
     </nav>
 
     <main>
-        <div class="gallery-grid">
-            <figure class="gallery-item">
-                <img src="images/image1.jpg" alt="Description of Image 1">
-                <!-- <figcaption><strong>Title of Work 1</strong><br>A brief description of this piece and its context. (Year)</figcaption> -->
-            </figure>
+        <h2>research</h2>
+        <div class="gallery-container">
+        <figure class="gallery-item">
+            <a href="images/image1.jpg" data-gallery="my-gallery" data-description="A countersnapping structure, unstretched, in its serial state.">
+                <picture>
+                    <source srcset="images/thumbnails/image1.webp" type="image/webp">
+                    <img src="images/thumbnails/image1.jpg" alt="Mountain Sunset" loading="lazy">
+                </picture>
+            </a>
+            <figcaption>An unstretched countersnapping structure</figcaption>
+        </figure>
 
-            <figure class="gallery-item">
-                <img src="images/image2.jpg" alt="Description of Image 2">
-                <!-- <figcaption><strong>Title of Work 2</strong><br>Reflections on the inspiration and execution of this project. (Year)</figcaption> -->
-            </figure>
+        <figure class="gallery-item">
+            <a href="images/image2.jpg" data-gallery="my-gallery" data-description="A countersnapping structure, stretched, in its parallel state.">
+                <picture>
+                    <source srcset="images/thumbnails/image2.webp" type="image/webp">
+                    <img src="images/thumbnails/image2.jpg" alt="Mountain Sunset" loading="lazy">
+                </picture>
+            </a>
+            <figcaption>A stretched countersnapping structure</figcaption>
+        </figure>
 
+        <!-- <figure class="gallery-item">
+            <a href="images/image1.jpg" data-gallery="my-gallery" data-description="A beautiful sunset over the seas.">
+                <picture>
+                    <source srcset="images/thumbnails/image1.webp" type="image/webp">
+                    <img src="images/thumbnails/image1.jpg" alt="Mountain Sunset" loading="lazy">
+                </picture>
+            </a>
+            <figcaption>Sunset over the Seas</figcaption>
+        </figure>
 
-            </div>
-        more to come
+        <figure class="gallery-item">
+            <a href="images/poster_award.jpg" data-gallery="my-gallery" data-description="A beautiful sunset over the seas.">
+                <picture>
+                    <source srcset="images/thumbnails/poster_award.webp" type="image/webp">
+                    <img src="images/thumbnails/poster_award.jpg" alt="Mountain Sunset" loading="lazy">
+                </picture>
+            </a>
+            <figcaption>Sunset over the Seas</figcaption>
+
+        </figure>
+
+                <figure class="gallery-item">
+            <a href="images/poster_award.jpg" data-gallery="my-gallery" data-description="A beautiful sunset over the seas.">
+                <picture>
+                    <source srcset="images/thumbnails/poster_award.webp" type="image/webp">
+                    <img src="images/thumbnails/poster_award.jpg" alt="Mountain Sunset" loading="lazy">
+                </picture>
+            </a>
+            <figcaption>Sunset over the Seas</figcaption>
+
+        </figure>
+
+                <figure class="gallery-item">
+            <a href="images/poster_award.jpg" data-gallery="my-gallery" data-description="A beautiful sunset over the seas.">
+                <picture>
+                    <source srcset="images/thumbnails/poster_award.webp" type="image/webp">
+                    <img src="images/thumbnails/poster_award.jpg" alt="Mountain Sunset" loading="lazy">
+                </picture>
+            </a>
+            <figcaption>Sunset over the Seas</figcaption>
+        </figure>
+
+        <figure class="gallery-item">
+            <a href="images/poster_award.jpg" data-gallery="my-gallery" data-description="A beautiful sunset over the seas.">
+                <picture>
+                    <source srcset="images/thumbnails/poster_award.webp" type="image/webp">
+                    <img src="images/thumbnails/poster_award.jpg" alt="Mountain Sunset" loading="lazy">
+                </picture>
+            </a>
+            <figcaption>Sunset over the Seas</figcaption>
+        </figure> -->
+
+        <!-- <figure class="gallery-item">
+            <a href="images/large/image3-large.jpg" data-gallery="my-gallery" data-description="A close-up of blooming spring flowers.">
+                <picture>
+                    <source srcset="images/thumbnails/image3-thumbnail.webp" type="image/webp">
+                    <img src="images/thumbnails/image3-thumbnail.jpg" alt="Spring Flowers" loading="lazy">
+                </picture>
+            </a>
+            <figcaption>Blooming Spring Flowers</figcaption>
+        </figure> -->
+
+        </div>
     </main>
 
     <footer>
@@ -87,6 +122,17 @@
             <a href="https://www.linkedin.com/in/paul-ducarme/" target="_blank" rel="noopener noreferrer">linkedin</a>.
         </p>
     </footer>
+
+<!-- Glightbox JavaScript - REQUIRED for the carousel's functionality -->
+    <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+    <script>
+        // Initialize Glightbox
+        const lightbox = GLightbox({
+            selector: '[data-gallery="my-gallery"]', // This tells Glightbox to target all <a> tags with this attribute
+            descriptionType: 'attr',                  // Use attributes for descriptions
+            descPosition: 'bottom',                    // Position the description at the bottom
+        });
+    </script>
 
 </body>
 </html>
