@@ -76,7 +76,7 @@ h1:not(.navigation h1) {
 }
 
 h2 { font-size: 1.5em; }
-h3 { font-size: 1.3em; }
+h3 { font-size: 1.15em; }
 
 /* Paragraphs */
 p {
@@ -119,7 +119,7 @@ img {
     float: left; /* Or 'right' if you want it on the other side */
 
     border: 3px solid white; /* The actual white border line */
-    border-radius: 1.5mm;
+    border-radius: 10px;
 
     /* Margins to separate from surrounding text */
     /* top right bottom left */
@@ -134,12 +134,82 @@ img {
     display: inline; /* Or display: inline-block; - inline is often sufficient for floats */
 }
 
-/* You might want to adjust the margin if floating right */
-.image-float-text.float-right {
-    float: right;
-    margin: 0 0 1em 1.5em; /* top right bottom left */
-                           /* 0 on top, 0 on right, 1em on bottom, 1.5em on left */
+.video-pair {
+  display: flex;
+  gap: 2em;
+  justify-content: center;
+  flex-wrap: wrap; /* allows stacking on small screens */
+  margin-top: 1.5em;
 }
+
+
+
+.video-figure {
+  flex: 1 1 42.5%;
+  max-width: 42.5%;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+@media (max-width: 600px) {
+  .video-figure {
+    flex: 1 1 60%;
+    max-width: 60%;
+    text-align: center;
+  }
+}
+
+.video-caption {
+  color: var(--text-color);
+  text-align: center;
+  margin-top: 0.75em; /* or 1em if you want more spacing */
+}
+
+.inline-video {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  display: block;
+  margin: 0;
+}
+
+.video-hover-wrapper {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.video-hover-wrapper .inline-video {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  transition: filter 0.3s ease;
+}
+
+.video-hover-wrapper:hover .inline-video {
+  filter: brightness(25%); /* darkens */
+}
+
+.video-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  white-space: nowrap;
+  color: white;
+  font-size: 1.1em;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.video-hover-wrapper:hover .video-overlay {
+  opacity: 1;
+}
+
 
 
 /* ========================================================================= */
@@ -264,7 +334,7 @@ img {
 
 /* Further responsive adjustment for very small screens if needed */
 
-/* @media (max-width: 600) {
+@media (max-width: 600) {
     .navigation-list {
         flex-direction: column;
         align-items: center;
@@ -272,7 +342,9 @@ img {
     .navigation-list li {
         margin-left: 0;
     }
-} */
+}
+
+
 
 
 /* Footer */
@@ -299,6 +371,7 @@ footer a:focus {
 /* ========================================================================= */
 /* --- HOMEPAGE SPECIFIC STYLES (for index.html) --- */
 /* ========================================================================= */
+
 
 body.homepage .navigation {
      flex-direction: column; /* Stacks <h1> (site name) and <ul.navigation-list> vertically */
@@ -384,7 +457,6 @@ body.homepage nav ul li {
 
 /* Individual Gallery Item Styling - SIMPLIFIED */
 .gallery-item {
-    border-radius: 10px; /* Keep rounded corners for a soft look on the figure itself */
     text-align: center; /* Center image and caption */
     display: flex; /* Use flexbox for vertical alignment of content */
     flex-direction: column;
@@ -414,16 +486,11 @@ body.homepage nav ul li {
 }
 
 .gallery-item img {
-    width: 99%; /* Make image fill its container's width */
-    height: 99%; /* Make image fill its container's height */
+    width: 100%; /* Make image fill its container's width */
+    height: 100%; /* Make image fill its container's height */
     object-fit: cover; /* IMPORTANT: Crop the image to fit the aspect ratio while maintaining its own proportions */
     display: block; /* Remove extra space below image */
-    transition: transform 0.2s ease; /* Smooth hover effect */
     border-radius: 10px;
-}
-
-.gallery-item img:hover {
-    transform: scale(1.01); /* Slightly enlarge image on hover */
 }
 
 /* Image Caption Styling - SIMPLIFIED */
@@ -434,14 +501,14 @@ body.homepage nav ul li {
 }
 
 /* Basic Responsiveness */
-@media (max-width: 768px) {
+@media (max-width: 780) {
     .gallery-container {
         grid-template-columns: repeat(auto-fit, minmax(225px, 1fr));
         gap: 8px;
     }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 600px) {
     .gallery-container {
         grid-template-columns: 1fr;
         gap: 5px;
@@ -461,12 +528,9 @@ body.homepage nav ul li {
   background-color: var(--background-color);
 }
 
-/* Actual text content */
-.gslide-desc {
-  color: var(--text-color);
-}
 
 .glightbox-container .gslide-description.description-bottom .gdesc-inner .gslide-desc {
   font-family: 'Crimson Pro', serif;
+  color: var(--text-color);
 }
 
