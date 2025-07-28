@@ -55,6 +55,7 @@ body {
     font-size: 1.15em; /* Base font size for readability */
     line-height: 1.7; /* Generous line spacing */
     letter-spacing: 0.01em; /* Very subtle letter spacing for airiness */
+    text-align: justify;
 
     /* Constrain content width for readability, center it */
     max-width: 700px; /* Adjust content width as needed */
@@ -532,5 +533,66 @@ body.homepage nav ul li {
 .glightbox-container .gslide-description.description-bottom .gdesc-inner .gslide-desc {
   font-family: 'Crimson Pro', serif;
   color: var(--text-color);
+}
+
+.profile-pic {
+    width: 225px;
+    height: 225px;
+    border-radius: 2em;
+    object-fit: cover;
+    float: left;
+    margin: 0 1.5em 0.75em 0;
+}
+
+@media (max-width: 600px) {
+    .profile-pic {
+        float: none;
+        display: block;
+        margin: 0 auto 1em auto;
+    }
+}
+
+.intext-left {
+    height: 225px;
+    width: auto;
+    border-radius: 2em;
+    object-fit: cover;
+    float: left;
+    margin: 0.75em 1.5em 0.75em 0;
+}
+
+@media (max-width: 600px) {
+    .intext-left {
+        float: none;
+        display: block;
+        margin: 1em auto 1em auto;
+    }
+}
+
+.intext-right {
+    height: 225px;
+    width: auto;
+    border-radius: 2em;
+    object-fit: cover;
+    float: right;
+    margin: 0.75em 0 0.75em 1.5em;
+}
+
+@media (max-width: 600px) {
+    .intext-right {
+        float: none;
+        display: block;
+        margin: 1em auto 1em auto;
+    }
+}
+
+
+.intro-paragraph:first-letter {
+    float: left;
+    font-size: 3.2em;
+    line-height: 1;
+    font-weight: 300;
+    font-family: 'Crimson Pro', serif;
+    margin-right: 0.25em;
 }
 

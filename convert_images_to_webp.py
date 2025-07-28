@@ -11,8 +11,8 @@ from pillow_heif import register_heif_opener
 pic_quality: int = 80
 pic_maxsize: int = 800
 large_pic_maxsize: int = 1000
-initial_input_dir = 'images'
-initial_output_dir = 'images/thumbnails'
+initial_input_dir = 'images/raw_images'
+initial_output_dir = 'images/processed_thumbnails'
 
 
 register_heif_opener()
@@ -53,7 +53,8 @@ for input_path in input_paths:
         img.save(output_filepath, format='webp', method=6, lossless=loss_less, quality=pic_quality)
         nb_converted_images += 1
         print(f"\tprogress: {nb_converted_images}/{len(input_paths)} successfully converted...")
-    except FileNotFoundError:
+    except FileNotFoundError as e:
+        print(e)
         print(f"Error: input file not found at '{input_path}'")
         continue
     except Exception as e:
