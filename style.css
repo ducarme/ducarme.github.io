@@ -55,7 +55,6 @@ body {
     font-size: 1.15em; /* Base font size for readability */
     line-height: 1.7; /* Generous line spacing */
     letter-spacing: 0.01em; /* Very subtle letter spacing for airiness */
-    text-align: justify;
 
     /* Constrain content width for readability, center it */
     max-width: 700px; /* Adjust content width as needed */
@@ -81,6 +80,7 @@ h3 { font-size: 1.15em; }
 
 /* Paragraphs */
 p {
+    text-align: justify;
     margin-bottom: 1.2em;
 }
 
