@@ -129,10 +129,26 @@ img {
                            /* 1em on the bottom (separates from text below it) */
                            /* 0 on the left */
 
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-
     /* Important: Override the 'display: block' from the general img rule */
     display: inline; /* Or display: inline-block; - inline is often sufficient for floats */
+}
+
+.image-float-text-minimalist {
+    float: left;
+    border-radius: 10px;
+    /* Or 'right' if you want it on the other side */
+
+    /* Margins to separate from surrounding text */
+    /* top right bottom left */
+    margin: 1em 0em 1em 0;
+    /* Adjust these values. Using 'em' for consistency with your typography. */
+    /* 0 on top, 1.5em on the right (separates from text flowing beside it) */
+    /* 1em on the bottom (separates from text below it) */
+    /* 0 on the left */
+
+    /* Important: Override the 'display: block' from the general img rule */
+    display: inline;
+    /* Or display: inline-block; - inline is often sufficient for floats */
 }
 
 .video-pair {
