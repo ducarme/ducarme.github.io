@@ -521,6 +521,21 @@ body.homepage nav ul li {
     color: var(--text-color); /* Using the variable you provided */
 }
 
+.gallery-item.narrow {
+    max-width: 200px;
+    /* or any width you prefer */
+    margin: 0 auto;
+    /* center in full-width container */
+}
+
+.gallery-item.medium {
+    max-width: 300px;
+    /* or any width you prefer */
+    margin: 0 auto;
+    /* center in full-width container */
+}
+
+
 /* Basic Responsiveness */
 @media (max-width: 780) {
     .gallery-container {
