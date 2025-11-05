@@ -28,6 +28,7 @@ output_dir = filedialog.askdirectory(initialdir=initial_output_dir)
 
 print(f'Conversion in progress... ({len(input_paths)} files to process)')
 nb_converted_images = 0
+os.makedirs(os.path.join(output_dir, 'large'), exist_ok=True)
 for input_path in input_paths:
     try:
         # Open the image using Pillow
