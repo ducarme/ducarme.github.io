@@ -573,27 +573,28 @@ body.homepage nav ul li {
 .profile-pic {
     width: 225px;
     height: 225px;
-    border-radius: 2em;
+    border-radius: 1em;
     object-fit: cover;
     float: left;
-    margin: 0 1.5em 0.75em 0;
+    margin: 1.0em 1.5em 0.75em 0;
 }
 
 @media (max-width: 600px) {
     .profile-pic {
         float: none;
         display: block;
-        margin: 0 auto 1em auto;
+        margin: 0 auto 1.5em auto;
     }
 }
 
 .intext-left {
     height: 225px;
     width: auto;
-    border-radius: 2em;
+    border-radius: 1em;
     object-fit: cover;
     float: left;
     margin: 0.75em 1.5em 0.75em 0;
+    overflow: hidden;
 }
 
 @media (max-width: 600px) {
@@ -607,10 +608,11 @@ body.homepage nav ul li {
 .intext-right {
     height: 225px;
     width: auto;
-    border-radius: 2em;
+    border-radius: 1em;
     object-fit: cover;
     float: right;
     margin: 0.75em 0 0.75em 1.5em;
+    overflow: hidden;
 }
 
 @media (max-width: 600px) {
@@ -622,12 +624,13 @@ body.homepage nav ul li {
 }
 
 
-.intro-paragraph:first-letter {
+.dropcap {
     float: left;
-    font-size: 3.2em;
-    line-height: 1;
-    font-weight: 300;
     font-family: 'Crimson Pro', serif;
-    margin-right: 0.25em;
+    font-size: 3.2em;
+    font-weight: 300;
+    line-height: 0.9;
+    margin-right: 0.3em;
+    margin-top: 0.1em;
 }
 
