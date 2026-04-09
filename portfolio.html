@@ -39,16 +39,36 @@
                 PNAS, April 2025
                 <a href="http://www.pnas.org/doi/10.1073/pnas.2423301122">[open-access link]</a>, 
                 <a href="https://www.science.org/doi/10.1126/science.ady6157">[featured in the weekly research highlights in Science]</a>
+                <figure class="gallery-item medium">
+                    <a href="images/movies/countersnapping_in_hands.webm" data-gallery="my-gallery" data-type="video"
+                        data-description="Countersnapping structure pulled by hand. Its mechanical response is counter-intuitive and leads to a wide range of exotic properties!">
+                
+                        <video autoplay loop muted playsinline preload="metadata" class="inline-video">
+                            <source src="images/movies/countersnapping_in_hands.webm" type="video/webm">
+                        </video>
+                    </a>
+                    <figcaption>countersnapping structure</figcaption>
+                </figure>
             </li>
             <li>
                 Ducarme P., Weber B., van Hecke M., Overvelde J.T.B.,
                 Simulating mechanical systems from
                 entities with arbitrarily complex deformation paths,
-                under review
-                <a href="https://arxiv.org/abs/2510.19741">[preprint]</a>, 
+                accepted
+                <a href="https://arxiv.org/abs/2510.19741">[preprint]</a>,
+                <a href="https://doi.org/10.1016/j.eml.2026.102476">[preproof]</a> 
                 <a href="https://github.com/ducarme/springable">[github repository]</a>, 
                 <a href="https://ducarme.github.io/springable/">[documentation]</a>
+                <figure class="gallery-item medium">
+                    <a href="images/movies/metagripper.webm" data-gallery="my-gallery" data-type="video"
+                        data-description="Simulation of a metafluidic gripper using the flexel framework. The metafluid is modeled by a single flexel with a multivalued pressure-volume curve.">
                 
+                        <video autoplay loop muted playsinline preload="metadata" class="inline-video">
+                            <source src="images/movies/metagripper.webm" type="video/webm">
+                        </video>
+                    </a>
+                    <figcaption>example of simulation using flexels</figcaption>
+                </figure>
             </li>
             <li>
                 Stinissen K, Ducarme P., Weber B., Gorissen B., Overvelde J.T.B.,
@@ -147,7 +167,7 @@
                 <li>
                     Work on countersnapping instabilities featured on Dutch national radio.
                     <a href="https://www.nporadio1.nl/fragmenten/nos-met-het-oog-op-morgen/0198246a-45d2-708a-bdd1-61a28592d9d8/2025-07-19-countersnapping-wat-is-het-en-wat-kan-je-ermee">
-                        [Co-authored Martin van Hecke's interview on NPO 1 (in Dutch)]</a>
+                        [Co-author Martin van Hecke's interview on NPO 1 (in Dutch)]</a>
                 </li>
                 <li>
                     'Vernuftig ontwerp zorgt voor eigenwijs gedrag',
@@ -264,6 +284,15 @@
         selector: '[data-gallery="my-gallery"]', // This tells Glightbox to target all <a> tags with this attribute
         descriptionType: 'attr',                  // Use attributes for descriptions
         descPosition: 'bottom',                    // Position the description at the bottom
+        plyr: {
+            config: {
+                loop: { active: true },
+                controls: false,
+                keyboard: { focused: false, global: false },
+                clickToPlay: false,
+                loop: { active: true }
+            }
+        },
     });
 </script>
 
